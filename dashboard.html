@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Maintenance</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <nav class="menu">
+        <a class="active" href="#">Dashboard</a>
+        <a href="#">Personnes</a>
+        <a href="#">Zones</a>
+        <a href="#">Machines</a>
+        <a href="#">Interventions</a>
+        <a href="#">Multiplication</a>
+        <a href="#">Deconnexion</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="hero">
+        <h1>Tableau de bord</h1>
+        <p>Vue d'ensemble de l'etat de votre parc machines et des interventions en cours.</p>
+      </section>
+
+      <section class="charts-grid">
+        <article class="card">
+          <h2>Etat du parc</h2>
+          <div class="park-wrap">
+            <div id="donutChart" class="donut"></div>
+            <ul id="parkLegend" class="legend"></ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Interventions actives par zone</h2>
+          <div id="zoneBars" class="bars"></div>
+        </article>
+      </section>
+
+      <section id="statsCards" class="stats-grid"></section>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
